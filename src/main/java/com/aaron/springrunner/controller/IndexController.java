@@ -5,11 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("user")
-public class UserController {
-
+@RequestMapping("")
+public class IndexController {
     @GetMapping
     public String get() {
-        return "Hi!";
+        return "Hi! this is index";
     }
 }
