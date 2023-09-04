@@ -13,7 +13,16 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    public User get(long id) {
+        return userRepository.getReferenceById(id);
+    }
+
     public List<User> getAll() {
         return userRepository.findAll();
+    }
+
+    public User add(User data) {
+        var user = userRepository.save(data);
+        return user;
     }
 }
